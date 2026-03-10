@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  color-scheme: light;
+  --ink-950: #0b0f14;
+  --ink-900: #121823;
+  --ink-800: #1b2433;
+  --mist-200: #e7eef5;
+  --mist-400: #b9c6d3;
+  --blood-500: #e11d48;
+  --blood-600: #be123c;
+  --amber-400: #f59e0b;
+  --teal-500: #14b8a6;
+  --sky-500: #38bdf8;
+}
+
+@layer base {
+  * {
+    @apply border-slate-800/60;
+  }
+
+  body {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(56, 189, 248, 0.15), transparent 45%),
+      radial-gradient(circle at 20% 80%, rgba(20, 184, 166, 0.18), transparent 50%),
+      linear-gradient(135deg, #070a10, #111827 45%, #10141d);
+    color: #e2e8f0;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: "Fraunces", "Times New Roman", serif;
+  }
+
+  a {
+    @apply text-slate-100;
+  }
+}
+
+@layer utilities {
+  .glow-ring {
+    box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.3), 0 20px 45px rgba(225, 29, 72, 0.2);
+  }
+}
